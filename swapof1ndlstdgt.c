@@ -10,9 +10,15 @@ int main()
     ld=n%10;
     n=n/10;
     int d=(int)log10(n);
-    fd=n/pow(10,d);
-    int r=n%(int)pow(10,d);
-    printf("swapped no.=%d%d%d",ld,r,fd);
+    int p=1;
+    for(int i=1;i<=d;i++)
+    {
+        p*=10;
+    }
+    fd=n/p;
+    int r=n%p;
+    n=ld*p*10+r*10+fd;
+    printf("swapped no.=%d",n);
     
     return 0;
 }
