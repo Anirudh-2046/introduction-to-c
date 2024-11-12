@@ -3,7 +3,7 @@
 int main()
 {
     system("cls");
-    int n,m,n1,m1;
+    int n,m;
     printf("enter number of rows and columns:");
     scanf("%d %d",&n,&m);
     int arr[n][m],array[n][m];
