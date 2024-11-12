@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main()
 {
-    int n,m,sum=0;
+    system("cls");
+    int n,m,sum=0,sum1=0;
     printf("enter no of rows and columnns:");
     scanf("%d %d",&n,&m);
     int arr[n][m];
@@ -17,6 +19,11 @@ int main()
     {
         sum+=arr[i][i];
     }
-    printf("sum of diagonal elements is=%d",sum);
+    for(int i=0,j=m-1;i<n,j>=0;i++,j--)
+    {
+        sum1+=arr[i][j];
+    }
+    printf("sum of  right(main) diagonal elements is=%d\n",sum);
+    printf("sum of  left(minor) diagonal elements is=%d",sum1);
     return 0;
 }
